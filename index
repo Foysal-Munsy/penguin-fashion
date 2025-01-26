@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penguin Fashion</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles/style.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +23,6 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                    },
-                    fontFamily: {
-                        bebas: ['Bebas Neue', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif'],
                     }
                 }
             }
@@ -34,31 +32,27 @@
 </head>
 
 <body>
-    <header class="bg-[#FFFBF0] py-10">
+    <header>
         <!-- navbar start -->
         <nav></nav>
         <!-- banner start -->
-        <div class="font-roboto lg:flex">
+        <div class="font-roboto">
             <!-- left -->
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h1 class="mb-4 text-8xl font-bebas">
-                    <span class="text-[#FABE4C]">Be the Penguins</span> <br>
+            <div class="flex">
+                <h1>
+                    <span>Be the Penguins</span> <br>
                     <span>of Winter</span>
                 </h1>
-                <p class="mb-4 text-base font-normal text-[#3E3E3E]">Lorem Ipsum is simply dummy text of the printing
+                <p class="">Lorem Ipsum is simply dummy text of the printing
                     and typesetting industry.</p>
-
-                <button
-                    class="w-32 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white font-bold py-2 px-4 rounded-xl">BUY
-                    NOW</button>
+                <button>BUY NOW</button>
             </div>
             <!-- right -->
-            <div class="grid place-items-center">
+            <div>
                 <img src="assets/images/model.png" alt="model">
             </div>
         </div>
     </header>
-
     <main></main>
     <footer></footer>
 </body>
