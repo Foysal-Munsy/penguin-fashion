@@ -11,8 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <!-- font awesome icon -->
-    <script src="https://kit.fontawesome.com/a81668a79a.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -38,23 +39,25 @@
         <!-- navbar start -->
         <nav></nav>
         <!-- banner start -->
-        <div class="font-roboto lg:flex">
+        <div class="font-roboto lg:flex lg:items-center lg:gap-8">
             <!-- left -->
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h1 class="mb-4 text-8xl font-bebas">
+            <div class="lg:w-1/2 flex flex-col justify-center px-4">
+                <h1 class="mb-4 text-6xl md:text-8xl lg:text-8xl font-bebas">
                     <span class="text-[#FABE4C]">Be the Penguins</span> <br>
                     <span>of Winter</span>
                 </h1>
-                <p class="mb-4 text-base font-normal text-[#3E3E3E]">Lorem Ipsum is simply dummy text of the printing
+                <p class="mb-4 text-sm  md:text-base font-normal text-[#3E3E3E]">Lorem Ipsum is simply dummy text of the
+                    printing
                     and typesetting industry.</p>
 
                 <button
-                    class="w-32 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white font-bold py-2 px-4 rounded-xl">BUY
+                    class="w-36 gap-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white font-bold py-4 px-5 rounded-xl"><i
+                        class="fa-solid fa-cart-shopping"></i> BUY
                     NOW</button>
             </div>
             <!-- right -->
             <div class="grid place-items-center">
-                <img src="assets/images/model.png" alt="model">
+                <img src="assets/images/model.png" alt="model" class="w-3/4 md:w-2/3 lg:w-full max-w-md">
             </div>
         </div>
     </header>
