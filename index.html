@@ -31,15 +31,53 @@
             }
         }
     </script>
+    <!-- scroll smooth -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 
 </head>
 
-<body>
-    <header class="bg-[#FFFBF0] py-10">
+<body class="scroll-smooth">
+    <header class="bg-[#FFFBF0] ">
         <!-- navbar start -->
-        <nav></nav>
+        <nav class="fixed top-0 left-0 w-full bg-[#FFFBF0] bg-opacity-90 z-50 px-4 grid grid-cols-4 items-center h-16">
+            <div class="col-span-2 lg:col-span-1">
+                <img src="./assets/icons/logo.png" alt="logo">
+            </div>
+
+            <!-- <div class="col-start-4 ml-auto text-[#363958] lg:col-start-2 lg:col-span-3">
+                <i id="menu-icon" class="fa-solid fa-bars lg:hidden"></i>
+                <ul id="menu-list" class="hidden lg:flex lg:gap-10 text-base font-medium">
+                    <li>Home</li>
+                    <li>Womans Product</li>
+                    <li>Mans Product</li>
+                    <li>Contact</li>
+                </ul>
+            </div> -->
+            <div class="col-start-4 ml-auto text-[#363958] lg:col-start-2 lg:col-span-3">
+                <!-- Menu Icon -->
+                <i id="menu-icon" class="fa-solid fa-bars cursor-pointer lg:hidden text-2xl"></i>
+
+                <!-- Navigation List -->
+                <ul id="menu-list"
+                    class="absolute top-14 right-4 bg-white shadow-lg rounded-lg hidden lg:flex lg:gap-10 text-base font-medium lg:static lg:shadow-none lg:bg-transparent lg:flex-row lg:rounded-none transition-all duration-300 ease-in-out">
+
+                    <li class="px-4 py-2 hover:bg-gray-100 rounded-lg lg:hover:bg-transparent"><a
+                            href="index.html">Home</a></li>
+                    <li class="px-4 py-2 hover:bg-gray-100 rounded-lg lg:hover:bg-transparent"><a href="#woman">Womans
+                            Product</a></li>
+                    <li class="px-4 py-2 hover:bg-gray-100 rounded-lg lg:hover:bg-transparent"><a href="#man">Mans
+                            Product</a></li>
+                    <li class="px-4 py-2 hover:bg-gray-100 rounded-lg lg:hover:bg-transparent"><a
+                            href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- banner start -->
-        <div class="font-roboto lg:flex lg:items-center lg:gap-8 px-4 lg:px-24">
+        <div class="font-roboto mt-16 lg:flex lg:items-center lg:gap-8 px-4 lg:px-24">
             <!-- left -->
             <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1 class="mb-4 text-6xl md:text-8xl lg:text-8xl font-bebas">
@@ -64,7 +102,7 @@
 
     <main class="font-roboto">
         <!-- Woman Section -->
-        <section class="my-20">
+        <section id="woman" class="my-20">
             <div class="mt-5 lg:px-24 px-4 mb-5">
                 <h1 class="mb-10 font-normal text-4xl lg:text-5xl font-bebas text-[#363958] text-center lg:text-left">
                     Woman
@@ -155,7 +193,7 @@
         </section>
 
         <!-- Man Section -->
-        <section class="my-20">
+        <section id="man" class="my-20">
             <div class="mt-5 lg:px-24 px-4 mb-5">
                 <h1 class="mb-10 font-normal text-4xl lg:text-5xl font-bebas text-[#363958] text-center lg:text-left">
                     Man
@@ -247,7 +285,7 @@
     </main>
 
 
-    <footer class="mt-10 lg:px-24 px-4 ">
+    <footer id="contact" class="mt-10 lg:px-24 px-4 ">
         <div class="grid lg:grid-cols-2 gap-20">
             <!-- Left -->
             <div class="order-last lg:order-first">
@@ -297,6 +335,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Get the icon and menu list elements
+        const menuIcon = document.getElementById("menu-icon");
+        const menuList = document.getElementById("menu-list");
+
+        // Add click event listener to the icon
+        menuIcon.addEventListener("click", () => {
+            // Toggle the visibility of the menu list
+            menuList.classList.toggle("hidden");
+        });
+    </script>
 </body>
 
 </html>
